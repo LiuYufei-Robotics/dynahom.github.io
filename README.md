@@ -1,6 +1,6 @@
-# DynaMimic project page
+# DynaHOM project page
 
-A lightweight, anonymous research project website for GitHub Pages. The layout follows the academic presentation style of HandMimicX, with an independent implementation and DynaMimic content.
+A lightweight, anonymous research project website for GitHub Pages. The layout follows the academic presentation style of HandMimicX, with an independent implementation and DynaHOM content.
 
 ## Preview
 
@@ -17,7 +17,7 @@ Open http://localhost:8000.
 - `index.html`: project title, summary, sections, and embedded styles.
 - `materials/`: project images and future demonstration videos.
 - Paper and code are marked as coming soon until public review-ready resources are available.
-- The initial summary is adapted from the local DynaHOM draft; update the final paper title and abstract when ready.
+- The page title and abstract match the Overleaf paper (`main.tex` and `sec/0_abstract.tex`). Keep them synchronized when revising the manuscript.
 
 For a video, add its file under `materials/` and replace the demonstration notice with:
 
@@ -31,7 +31,7 @@ For a video, add its file under `materials/` and replace the demonstration notic
 
 Enable **Settings → Pages → Deploy from a branch → main → / (root)**. The repository contains `.nojekyll` and requires no build or dependencies.
 
-Only a repository named `<owner>.github.io` is served at the account root. A repository named `dynamimic.github.io` under a different account is a project site at `https://<owner>.github.io/dynamimic.github.io/`.
+The repository is `LiuYufei-Robotics/dynahom.github.io`. Its project site is https://liuyufei-robotics.github.io/dynahom.github.io/.
 
 ## Anonymous review
 
