@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DynaHOM: An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation">
+  <meta name="description" content="DynaHOM — An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation">
   <meta name="referrer" content="no-referrer">
   <meta name="color-scheme" content="light">
-  <title>DynaHOM: An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation</title>
+  <title>DynaHOM — An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation</title>
   <style>
     :root { --ink: #18202b; --muted: #586575; --line: #e2e7ed; --blue: #4672c4; }
     * { box-sizing: border-box; }
@@ -26,7 +26,6 @@
     .resource { display: inline-block; padding: 7px 20px; border: 1px solid #cbd4e1; border-radius: 24px; text-decoration: none; font-size: 16px; line-height: 1.5; }
     a.resource { background: #fff; }
     a.resource:hover { background: #e9eef6; }
-    .unavailable { color: var(--muted); }
     .section { width: min(100% - 48px, 1000px); margin-inline: auto; padding: 58px 0 0; }
     .section h2 { margin: 0 0 24px; text-align: center; font-size: 36px; line-height: 1.2; }
     .abstract { max-width: 800px; }
@@ -54,21 +53,19 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="hero">
-    <h1><em><span class="dyna">Dyna</span><span class="hom">HOM:</span></em>
+    <h1><em><span class="dyna">Dyna</span><span class="hom">HOM</span></em>
       <span class="subtitle">An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation</span>
     </h1>
     <p class="authors">Anonymous Authors</p>
     <nav class="resources" aria-label="Project resources">
       <a class="resource" href="#overview">Overview</a>
       <a class="resource" href="#demonstrations">Demonstrations</a>
-      <span class="resource unavailable">Paper · Coming soon</span>
-      <span class="resource unavailable">Code · Coming soon</span>
     </nav>
   </header>
   <main id="main">
     <section class="section abstract" id="abstract" aria-labelledby="abstract-title">
       <h2 id="abstract-title">Abstract</h2>
-      <p>Dynamic object manipulation requires a robot to intercept a moving target, establish a stable grasp, and control the object's subsequent motion toward a task goal. Object shape and hand mechanism affect both grasp acquisition and the ability to retain the object during transport and reorientation. We present DynaHOM, an object-centric reinforcement learning framework for dynamic object manipulation that connects grasping, planning, and execution through object states and goals. A language-conditioned perception front end identifies the target and continuously estimates its 6D pose. An RL policy then performs dynamic grasping using object-centric feedback. Once the object is grasped, a vision-language model generates an object-level target trajectory conditioned on the task instruction. The RL policy subsequently tracks this trajectory through closed-loop control. We instantiate the framework on Unitree G1-D with a three-finger hand and on a Franka Emika Panda arm with a parallel-jaw gripper. Policies are trained separately with reward terms and control interfaces adapted to each embodiment. We validate the framework in real-world scenarios spanning dynamic object manipulation in everyday settings and conveyor-belt parcel sorting for industrial logistics. Project page: <a href="https://anonymous.4open.science/w/DynaHOM2026/">https://anonymous.4open.science/w/DynaHOM2026/</a>.</p>
+      <p>Dynamic object manipulation requires a robot to intercept a moving target, establish a stable grasp, and control the object's subsequent motion toward a task goal. Object shape and hand mechanism affect both grasp acquisition and the ability to retain the object during transport and reorientation. We present DynaHOM, an object-centric reinforcement learning framework for dynamic object manipulation that connects grasping, planning, and execution through object states and goals. A language-conditioned perception front end identifies the target and continuously estimates its 6D pose. An RL policy then performs dynamic grasping using object-centric feedback. Once the object is grasped, a vision-language model generates an object-level target trajectory conditioned on the task instruction. The RL policy subsequently tracks this trajectory through closed-loop control. We instantiate the framework on Unitree G1-D with a three-finger hand and on a Franka Emika Panda arm with a parallel-jaw gripper. Policies are trained separately with reward terms and control interfaces adapted to each embodiment. We validate the framework in real-world scenarios spanning dynamic object manipulation in everyday settings and conveyor-belt parcel sorting for industrial logistics.</p>
     </section>
     <section class="section" id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">Dynamic Grasping and Manipulation</h2>

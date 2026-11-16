@@ -16,8 +16,8 @@ Open http://localhost:8000.
 
 - `index.html`: project title, summary, sections, and embedded styles.
 - `materials/`: project images and future demonstration videos.
-- Paper and code are marked as coming soon until public review-ready resources are available.
-- The page title and abstract match the Overleaf paper (`main.tex` and `sec/0_abstract.tex`). Keep them synchronized when revising the manuscript.
+- Paper and code links are omitted until resources are available.
+- The title wording and abstract body follow the Overleaf paper (`main.tex` and `sec/0_abstract.tex`). The page heading omits the colon after DynaHOM, and its abstract omits the paper's final project-page link.
 
 For a video, add its file under `materials/` and replace the demonstration notice with:
 
