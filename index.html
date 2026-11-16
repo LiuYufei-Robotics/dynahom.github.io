@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DynaMimic: Object-Centric Learning for Dynamic Object Manipulation. Anonymous research project page.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <title>DynaMimic | Dynamic Object Manipulation</title>
+  <style>
+    :root { --ink: #18202b; --muted: #586575; --line: #e2e7ed; --blue: #4672c4; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; background: #fff; color: var(--ink); font-family: "Times New Roman", Times, serif; font-size: 18px; line-height: 1.75; }
+    a { color: var(--blue); text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+    .skip { position: absolute; left: 16px; top: -100px; padding: 8px 16px; background: #fff; z-index: 2; }
+    .skip:focus { top: 10px; }
+    .hero { padding: 78px 24px 58px; text-align: center; background: #f3f5f8; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0; font-size: clamp(56px, 10vw, 96px); font-weight: 700; letter-spacing: -.06em; line-height: 1.12; }
+    .dyna { color: #b48600; }
+    .mimic { color: var(--blue); }
+    .subtitle { max-width: 800px; margin: 22px auto 0; font-size: clamp(25px, 4vw, 36px); font-weight: 500; letter-spacing: -.025em; line-height: 1.35; text-wrap: balance; }
+    .authors { margin: 23px 0 0; color: var(--muted); }
+    .resources { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+    .resource { display: inline-block; padding: 7px 20px; border: 1px solid #cbd4e1; border-radius: 24px; text-decoration: none; font-size: 16px; line-height: 1.5; }
+    a.resource { background: #fff; }
+    a.resource:hover { background: #e9eef6; }
+    .unavailable { color: var(--muted); }
+    .section { width: min(100% - 48px, 1000px); margin-inline: auto; padding: 58px 0 0; }
+    .section h2 { margin: 0 0 24px; text-align: center; font-size: 36px; line-height: 1.2; }
+    .abstract { max-width: 800px; }
+    .abstract p { margin: 0; color: #363636; font-size: 20px; line-height: 1.75; text-align: justify; }
+    figure { margin: 0; }
+    img { display: block; width: 100%; height: auto; }
+    figcaption { max-width: 850px; margin: 18px auto 0; text-align: center; font-size: 17px; color: var(--muted); }
+    .setup { max-width: 800px; }
+    .notice { padding: 48px 24px; border: 1px solid var(--line); border-radius: 8px; background: #f8fafc; text-align: center; }
+    .notice p { margin: 0; color: var(--muted); }
+    .notice p:first-child { margin-bottom: 6px; color: var(--ink); font-size: 22px; }
+    footer { width: min(100% - 48px, 1000px); margin: 64px auto 0; padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 16px; }
+    @media (max-width: 640px) {
+      .hero { padding: 52px 20px 40px; }
+      .subtitle { margin-top: 16px; }
+      .section { width: calc(100% - 32px); padding-top: 42px; }
+      .section h2 { font-size: 30px; margin-bottom: 20px; }
+      .abstract p { font-size: 18px; text-align: left; }
+      figcaption { font-size: 16px; }
+      footer { margin-top: 44px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="hero">
+    <h1><em><span class="dyna">Dyna</span><span class="mimic">Mimic</span></em></h1>
+    <p class="subtitle">Object-Centric Learning for Dynamic Object Manipulation</p>
+    <p class="authors">Anonymous Authors</p>
+    <nav class="resources" aria-label="Project resources">
+      <a class="resource" href="#overview">Overview</a>
+      <a class="resource" href="#demonstrations">Demonstrations</a>
+      <span class="resource unavailable">Paper · Coming soon</span>
+      <span class="resource unavailable">Code · Coming soon</span>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="section abstract" id="abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Dynamic object manipulation requires a robot to intercept a moving target, establish a stable grasp, and control the object’s subsequent motion toward a task goal. DynaMimic explores object-centric reinforcement learning to connect dynamic grasping and subsequent manipulation through object states and goals. The framework combines visual object-state estimation with closed-loop policy control, with applications to everyday object manipulation and conveyor-belt parcel sorting.</p>
+    </section>
+    <section class="section" id="overview" aria-labelledby="overview-title">
+      <h2 id="overview-title">Dynamic Grasping and Manipulation</h2>
+      <figure>
+        <img src="materials/real_robot_conveyor.jpg" alt="Sequences showing a humanoid robot grasping and placing moving parcels on a conveyor, using a single hand or both hands." width="2048" height="819" decoding="async">
+        <figcaption>From intercepting moving objects to task-oriented placement: real-world conveyor manipulation with a humanoid robot.</figcaption>
+      </figure>
+    </section>
+    <section class="section setup" id="setup" aria-labelledby="setup-title">
+      <h2 id="setup-title">Real-World Setup</h2>
+      <figure>
+        <img src="materials/set_up.jpg" alt="A Unitree G1-D robot equipped with three-finger hands, an RGB-D camera, and everyday objects for manipulation experiments." width="1756" height="1407" loading="lazy" decoding="async">
+        <figcaption>A humanoid manipulation platform with RGB-D perception and a collection of everyday target objects.</figcaption>
+      </figure>
+    </section>
+    <section class="section" id="demonstrations" aria-labelledby="demonstrations-title">
+      <h2 id="demonstrations-title">Demonstrations</h2>
+      <div class="notice">
+        <p>Videos coming soon</p>
+        <p>Dynamic grasping, object manipulation, and conveyor-belt sorting.</p>
+      </div>
+    </section>
+  </main>
+  <footer>DynaMimic · Research project page</footer>
+</body>
+</html>
