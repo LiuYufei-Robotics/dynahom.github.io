@@ -21,7 +21,6 @@
     .dyna { color: #b48600; }
     .hom { color: var(--blue); }
     .subtitle { display: block; max-width: 900px; margin: 22px auto 0; font-size: clamp(25px, 4vw, 36px); font-weight: 500; letter-spacing: -.025em; line-height: 1.35; text-wrap: balance; }
-    .authors { margin: 23px 0 0; color: var(--muted); }
     .resources { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
     .resource { display: inline-block; padding: 7px 20px; border: 1px solid #cbd4e1; border-radius: 24px; text-decoration: none; font-size: 16px; line-height: 1.5; }
     a.resource { background: #fff; }
@@ -56,29 +55,42 @@
     <h1><em><span class="dyna">Dyna</span><span class="hom">HOM</span></em>
       <span class="subtitle">An Object-Centric Reinforcement Learning Framework for Dynamic Object Manipulation</span>
     </h1>
-    <p class="authors">Anonymous Authors</p>
     <nav class="resources" aria-label="Project resources">
       <a class="resource" href="#overview">Overview</a>
+      <a class="resource" href="#real-world">Real World</a>
       <a class="resource" href="#demonstrations">Demonstrations</a>
     </nav>
   </header>
   <main id="main">
     <section class="section abstract" id="abstract" aria-labelledby="abstract-title">
       <h2 id="abstract-title">Abstract</h2>
-      <p>Dynamic object manipulation requires a robot to intercept a moving target, establish a stable grasp, and control the object's subsequent motion toward a task goal. Object shape and hand mechanism affect both grasp acquisition and the ability to retain the object during transport and reorientation. We present DynaHOM, an object-centric reinforcement learning framework for dynamic object manipulation that connects grasping, planning, and execution through object states and goals. A language-conditioned perception front end identifies the target and continuously estimates its 6D pose. An RL policy then performs dynamic grasping using object-centric feedback. Once the object is grasped, a vision-language model generates an object-level target trajectory conditioned on the task instruction. The RL policy subsequently tracks this trajectory through closed-loop control. We instantiate the framework on Unitree G1-D with a three-finger hand and on a Franka Emika Panda arm with a parallel-jaw gripper. Policies are trained separately with reward terms and control interfaces adapted to each embodiment. We validate the framework in real-world scenarios spanning dynamic object manipulation in everyday settings and conveyor-belt parcel sorting for industrial logistics.</p>
+      <p>Dynamic object manipulation requires coordinated interception, grasp retention, and control of subsequent object motion. However, variations in object geometry and hand mechanisms complicate both grasp acquisition and the transport and reorientation of the grasped object. We present DynaHOM, an object-centric reinforcement learning (RL) framework for dynamic object manipulation. Object geometry, motion, and goals provide a common interface for grasping, planning, and execution. A language-conditioned perception front end identifies the target and continuously estimates its 6D pose, providing object-state feedback for RL-based dynamic grasping. After grasp acquisition, a vision-language model (VLM) generates object-space waypoints from the task instruction, and the RL policy tracks these waypoints through closed-loop control. We instantiate DynaHOM on Unitree G1-D with three-fingered hands and on a Franka Emika Panda arm with a parallel-jaw gripper, training separate policies with rewards and control interfaces adapted to each embodiment. We evaluate dynamic grasping and subsequent manipulation in simulation and real-world tasks, including everyday object handling and conveyor-belt parcel placement.</p>
     </section>
     <section class="section" id="overview" aria-labelledby="overview-title">
-      <h2 id="overview-title">Dynamic Grasping and Manipulation</h2>
+      <h2 id="overview-title">Framework Overview</h2>
       <figure>
-        <img src="materials/real_robot_conveyor.jpg" alt="Sequences showing a humanoid robot grasping and placing moving parcels on a conveyor, using a single hand or both hands." width="2048" height="819" decoding="async">
-        <figcaption>From intercepting moving objects to task-oriented placement: real-world conveyor manipulation with a humanoid robot.</figcaption>
+        <a href="materials/pipeline_v1.jpg" target="_blank" rel="noopener" aria-label="Open the framework overview at full resolution">
+          <img src="materials/pipeline_v1.jpg" alt="DynaHOM overview showing object-centric reinforcement learning, perception and VLM waypoint planning, and unimanual and bimanual dynamic manipulation." width="9198" height="3469" decoding="async">
+        </a>
+        <figcaption>Overview of DynaHOM. Object-centric policy training combines robot proprioception, object geometry and motion, and goal errors. Perception and VLM waypoint planning guide RL execution, with unimanual and bimanual manipulation in the real world.</figcaption>
+      </figure>
+    </section>
+    <section class="section" id="real-world" aria-labelledby="real-world-title">
+      <h2 id="real-world-title">Real-World Evaluation</h2>
+      <figure>
+        <a href="materials/real_robot.jpg" target="_blank" rel="noopener" aria-label="Open the six real-world tasks at full resolution">
+          <img src="materials/real_robot.jpg" alt="Six real-world DynaHOM tasks: unimanual, bimanual, and adaptive conveyor parcel placement; placing a rolling can upright on a shelf; placing a cabbage in a bowl; and placing a plastic bottle in a basket." width="7844" height="6427" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Real-world evaluation of DynaHOM on six tasks. (a)–(c) show industrial conveyor-belt parcel placement at constant speeds: 70 mm/s in (a, b) and 120 mm/s in (c). (d)–(f) show everyday dynamic manipulation of objects moving at varying speeds. Each row shows execution from left to right; red annotations indicate object speeds and motion directions.</figcaption>
       </figure>
     </section>
     <section class="section setup" id="setup" aria-labelledby="setup-title">
       <h2 id="setup-title">Real-World Setup</h2>
       <figure>
-        <img src="materials/set_up.jpg" alt="A Unitree G1-D robot equipped with three-finger hands, an RGB-D camera, and everyday objects for manipulation experiments." width="1756" height="1407" loading="lazy" decoding="async">
-        <figcaption>A humanoid manipulation platform with RGB-D perception and a collection of everyday target objects.</figcaption>
+        <a href="materials/set_up.jpg" target="_blank" rel="noopener" aria-label="Open the experimental setup at full resolution">
+          <img src="materials/set_up.jpg" alt="The real-world hardware setup: a Unitree G1-D with Dex3-1 hands, an Orbbec Astra Pro Plus RGB-D camera, manipulated objects, and placement target objects." width="2031" height="1681" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Real-world hardware setup and object set, including manipulated objects and target objects for placement.</figcaption>
       </figure>
     </section>
     <section class="section" id="demonstrations" aria-labelledby="demonstrations-title">
