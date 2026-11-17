@@ -18,7 +18,7 @@ Open http://localhost:8000.
 - `materials/`: project images and future demonstration videos.
 - Paper and code links are omitted until resources are available.
 - The title wording and abstract body follow the latest Overleaf cloud paper (`main.tex` and `sec/0_abstract.tex`). The page heading omits the colon after DynaHOM, and its abstract omits the paper's final project-page link. No author line is displayed.
-- Current paper figures: `materials/pipeline_v1.jpg` (framework overview), `materials/real_robot.jpg` (six real-world tasks), and `materials/set_up.jpg` (hardware setup). Each figure opens at full resolution when clicked.
+- Current paper figures: `materials/pipeline_v2.jpg` (framework overview exported from the compiled Overleaf paper, including native text corrections), `materials/real_robot.jpg` (six real-world tasks), and `materials/set_up.jpg` (hardware setup). Each figure opens at full resolution when clicked.
 
 For a video, add its file under `materials/` and replace the demonstration notice with:
 
